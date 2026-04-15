@@ -1,21 +1,18 @@
 #include "wskibidipad-layouts.dtsi"
-
 / {
-    default_transform: keymap_transform0 {
-        compatible = "zmk,matrix-transform";
-        columns = <2>; // Length of the "col-gpios" array
-        rows = <2>; // Length of the "row-gpios" array
-        map = <
-        // key 1 | key 2 | rotator
-           RC(0,0) RC(1,0) RC(1,1)
-        // key 3 | he 1 | he 2 |he 3
-           RC(0,1)
-        >;
+    kscan0: kscan0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        diode-direction = "col2row";
+        wakeup-source;
+
+        col-gpios
+            = <&xiao_d 0 GPIO_ACTIVE_HIGH>
+            , <&xiao_d 2 GPIO_ACTIVE_HIGH>
+            ;
+
+        row-gpios
+            = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
     };
 };
-
-&physical_layout0 {
-    transform = <&default_transform>;
-};
-
-
