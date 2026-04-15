@@ -4,7 +4,7 @@ name: wskibidipad
 type: shield
 url: https://github.com/duykhanh09103/wSkibidiKeypad
 requires:
-  - xiao_rp2040
+  - xiao_rp2040//zmk
 exposes:
   - i2c_oled
 features:
