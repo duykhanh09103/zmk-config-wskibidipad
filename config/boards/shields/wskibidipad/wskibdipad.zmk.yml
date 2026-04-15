@@ -1,0 +1,13 @@
+file_format: "1"
+id: wskibidipad
+name: wskibidipad
+type: shield
+url: https://github.com/duykhanh09103/wSkibidiKeypad
+requires:
+  - xiao_rp2040
+exposes:
+  - i2c_oled
+features:
+  - keys
+  - display
+  - encoder
