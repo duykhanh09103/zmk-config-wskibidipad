@@ -19,6 +19,6 @@
 #
 ---
 include:
-  - board: seeeduino_xiao_rp2040//zmk
+  - board: xiao_rp2040//zmk
     shield: wskibidipad
     artifact-name: wskibidipad
