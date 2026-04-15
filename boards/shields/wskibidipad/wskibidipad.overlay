@@ -1,0 +1,16 @@
+#include "wskibidipad-layouts.dtsi"
+
+/ {
+    default_transform: keymap_transform0 {
+        compatible = "zmk,matrix-transform";
+        columns = <2>; // Length of the "col-gpios" array
+        rows = <2>; // Length of the "row-gpios" array
+        map = <
+        // key 1 | key 2 | rotator
+           RC(0,0) RC(1,0) RC(1,1)
+        // key 3 | he 1 | he 2 |he 3
+           RC(0,1)
+        >;
+    };
+};
+
